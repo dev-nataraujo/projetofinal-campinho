@@ -1,0 +1,28 @@
+h1{ /* Texto do header */
+    font-family:'Parkinsans';
+    text-align: center;
+    padding: 10px;
+}
+
+/* Container da lista de cards */
+.lista-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .lista-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .lista-card {
+        grid-template-columns: 1fr;
+    }
+}
