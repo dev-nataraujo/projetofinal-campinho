@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow: hidden; /* Evita o scroll na página */
 }
 
 /* Estilização do conteúdo do modal */
@@ -19,7 +20,9 @@
   border-radius: 12px;
   padding: 20px;
   width: 90%;
-  max-width: 600px;
+  max-width: 600px; /* Limita a largura máxima */
+  max-height: 85%; /* Limita a altura máxima */
+  overflow-y: auto; /* Adiciona scroll vertical ao conteúdo do modal */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra leve */
   position: relative;
   text-align: center; /* Centraliza os textos */
@@ -202,6 +205,7 @@
   margin: 20px 0 0;
   padding: 0;
   max-height: 200px;
+  overflow-y: auto; /* Adiciona scroll apenas à lista de comentários */
   overflow-y: auto;
   border-top: 1px solid #ddd;
   padding-top: 10px;

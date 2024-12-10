@@ -1,11 +1,24 @@
 import React from 'react';
 import './modal.css'
+import comentariosMock from './data'
 
 function Modal({onClose, data}) {
   const [comment, setComment] = React.useState(''); // Estado para armazenar o comentário
   const [comments, setComments] = React.useState([]); // Lista de comentários armazenados
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0); // Controle do índice da imagem exibida
   
+  React.useEffect(() => { // Carrega comentários mockados com base no ID do jogo
+    const comentariosExistentes = comentariosMock[data.id] || [];
+    setComments(comentariosExistentes);
+  }, [data.id]);
+
+  React.useEffect(() => {     
+    document.body.style.overflow = 'hidden'; // Impede o scroll do body quando o modal está aberto
+    return () => {
+      document.body.style.overflow = 'auto'; // Restaura o scroll do body quando o modal é fechado
+    };
+  }, []);
+
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) { // Detecta o clique fora do modal
       onClose();
@@ -54,6 +67,7 @@ function Modal({onClose, data}) {
         <p>{data.attributes.description || 'Sem descrição disponível.'}</p>
         <p className="nota"> 📊 Nota: {data.attributes.rating}</p>
         <p>🎰 Gênero: {data.attributes.genre}</p>
+        <p>📅 Data de lançamento: {data.attributes.releaseDate}</p>
         <p className="plataforma">🕹️ Plataformas: {data.attributes.platforms}</p>
 
         <div className="comments-section">
