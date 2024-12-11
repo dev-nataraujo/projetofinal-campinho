@@ -41,9 +41,7 @@ function Home() {
   return (
     <div>
       <section>
-        <h1>DESCUBRA O QUE ESTÃO COMENTANDO SOBRE OS JOGOS QUE VOCÊ DESEJA MARATONAR!</h1>
-        {/* <img src="https://us.123rf.com/450wm/milkos/milkos1904/milkos190402501/121618694-mulher-que-joga-jogos-de-v%C3%ADdeo-%C3%A0-noite-empurrando-nos-bot%C3%B5es-iluminados-com-luzes-de-n%C3%A9on.jpg?ver=6" className='img-topo'></img> */}
-        
+        {/* <h1>DESCUBRA O QUE ESTÃO COMENTANDO SOBRE OS JOGOS QUE VOCÊ DESEJA MARATONAR!</h1> */}        
         <div className='lista-card'>
           {
             data.map(item => (

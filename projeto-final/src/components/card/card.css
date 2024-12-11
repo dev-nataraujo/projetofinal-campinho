@@ -1,6 +1,4 @@
 /* Estilo geral para o card */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 .card {
     background-color: #fff;
     border-radius: 8px;

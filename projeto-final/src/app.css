@@ -1,6 +1,6 @@
 body {
-    background: linear-gradient(145deg, #1a1a2e, #0f3460);
-    background-image: url('./assets/futuro-gamepad-neon-para-videogames-joystick-com-efeito-de-luz-para-console-de-jogos-ilustracao-em-vetor_185386-1446.avif'), radial-gradient(circle at bottom, #0f3460, #1a1a2e 80%);
+    background: linear-gradient(145deg, #1a1a2e, #0a0c28);
+    background-image: url('./assets/background.png'), radial-gradient(circle at bottom, #0f3460, #1a1a2e);
     background-size: cover; /* A imagem cobre toda a tela */
     /* background-repeat: no-repeat; Impede a repetição da imagem */
     background-attachment: fixed; /* Torna o background fixo ao rolar a página */

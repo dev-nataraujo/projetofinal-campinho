@@ -14,6 +14,12 @@
     justify-content: flex-start;
 }
 
+.navbar-logo img {
+    height: 50px; /* Ajuste a altura da imagem */
+    width: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem não será cortada */
+}
+
 .navbar-links {
     list-style: none;
     display: flex;
@@ -31,7 +37,8 @@
 .navbar-links a {
     text-decoration: none; /* Remove sublinhado dos links */
     color: #fff;
-    font-size: 1rem;
+    font-family: 'Zen Dots', sans-serif;
+    font-size: 13.5px;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
@@ -39,8 +46,7 @@
 
 /* Efeito de hover nos links */
 .navbar-links a:hover {
-    color: #e94560;
-    transform: scale(1.1); /* Aumenta levemente o tamanho */
+    color: #fff;
 }
 
 /* Linha decorativa sob o link */
@@ -51,7 +57,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #e94560;
+    background-color: #ee3ec9;
     transition: width 0.3s ease;
 }
 
