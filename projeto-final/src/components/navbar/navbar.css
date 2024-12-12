@@ -6,7 +6,7 @@
     background-color: #090f2c;
 }
 
-.navbar-logo{
+.navbar-logo {
     display: flex;
     margin: 0;
     padding: 0;
@@ -15,9 +15,9 @@
 }
 
 .navbar-logo img {
-    height: 50px; /* Ajuste a altura da imagem */
-    width: auto; /* Mantém a proporção da imagem */
-    object-fit: contain; /* Garante que a imagem não será cortada */
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .navbar-links {
@@ -31,7 +31,8 @@
 }
 
 .navbar-links li {
-    display: inline;
+    display: inline-block;
+    margin: 0 1px; /* Adiciona espaçamento horizontal */
 }
 
 .navbar-links a {
@@ -57,10 +58,90 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #ee3ec9;
+    background-color: #0056b3;
     transition: width 0.3s ease;
 }
 
 .navbar-links a:hover::after {
     width: 100%; /* Linha decorativa completa */
+}
+
+/* Botão do dropdown */
+.dropbtn {
+    background-color: #090f2c;
+    color: #fff; /* Cor do texto */
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Zen Dots', sans-serif;
+    border: none;
+    cursor: pointer; /* Cursor de ponteiro */
+    position: relative; /* Necessário para a linha decorativa */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Linha decorativa sob o botão do dropdown */
+.dropbtn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Espaço abaixo do texto */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0056b3; /* Cor da linha */
+    transition: width 0.3s ease;
+}
+
+.dropbtn:hover::after {
+    width: 100%; /* Expande a linha */
+}
+
+/* Container do dropdown */
+.dropdown {
+    position: relative; /* Para posicionar o conteúdo em relação ao botão */
+    display: inline-block; /* Garante que esteja em linha */
+}
+
+/* Conteúdo do dropdown (os links) */
+.dropdown-item {
+    display: none; /* Inicialmente escondido */
+    position: absolute; /* Posiciona abaixo do botão */
+    left: 0;
+    background-color: #1a1f3c; /* Cor de fundo */
+    min-width: 140px; /* Largura mínima */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Coloca acima de outros elementos */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-top: 5px;
+    padding: 6px 0; /* Espaçamento interno */
+}
+
+/* Estilo para os links dentro do dropdown */
+.dropdown-item .nav-item {
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block; /* Cada link ocupa uma linha */
+    font-size: 13px;
+    font-family: 'Zen Dots', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Hover nos links */
+.dropdown-item .nav-item:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Mostrar o dropdown ao passar o mouse sobre o container */
+.dropdown:hover .dropdown-item {
+    display: block; /* Exibe o dropdown */
+}
+
+@media (max-width: 768px) {
+    .dropdown-item {
+        left: 0; /* Alinha ao início do botão */
+        right: auto; /* Evita ultrapassar a tela */
+        min-width: 100%; /* Usa a largura total do container pai */
+    }
 }

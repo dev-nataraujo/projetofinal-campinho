@@ -1,5 +1,6 @@
-h1{ /* Texto do header */
-    font-family:'Parkinsans';
+h1 {
+    /* Texto do header */
+    font-family: 'Parkinsans';
     text-align: center;
     padding: 10px;
 }
@@ -12,6 +13,33 @@ h1{ /* Texto do header */
     margin: 0 auto;
     max-width: 1200px;
     padding: 50px;
+}
+
+.error-message {
+    text-align: center;
+    font-size: 24px;
+}
+
+.error-button {
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.error-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.error-button:active {
+    transform: scale(1);
 }
 
 /* Responsividade */

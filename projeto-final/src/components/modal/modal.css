@@ -5,28 +5,37 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fundo escuro com opacidade */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow: hidden; /* Evita o scroll na página */
+  overflow: hidden;
+  /* Evita o scroll na página */
 }
 
 /* Estilização do conteúdo do modal */
 .modal-content {
-  background-color: #fff; /* Fundo escuro para combinar com o tema de jogos */
+  background-color: #fff;
+  /* Fundo escuro para combinar com o tema de jogos */
   color: black;
   border-radius: 12px;
   padding: 20px;
   width: 90%;
-  max-width: 600px; /* Limita a largura máxima */
-  max-height: 85%; /* Limita a altura máxima */
-  overflow-y: auto; /* Adiciona scroll vertical ao conteúdo do modal */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra leve */
+  max-width: 600px;
+  /* Limita a largura máxima */
+  max-height: 85%;
+  /* Limita a altura máxima */
+  overflow-y: auto;
+  /* Adiciona scroll vertical ao conteúdo do modal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  /* Sombra leve */
   position: relative;
-  text-align: center; /* Centraliza os textos */
-  animation: slideDown 0.3s ease; /* Animação suave na abertura */
+  text-align: center;
+  /* Centraliza os textos */
+  animation: slideDown 0.3s ease;
+  /* Animação suave na abertura */
 }
 
 /* Animação suave para o modal */
@@ -35,6 +44,7 @@
     transform: translateY(-20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -110,7 +120,7 @@
 .modal-content p {
   margin: 10px 0;
   line-height: 1.6;
-  font-family:'Parkinsans';
+  font-family: 'Parkinsans';
   font-size: 1.1 rem;
   color: #333;
 }
@@ -118,9 +128,10 @@
 .modal-content h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  font-family:'Parkinsans';
+  font-family: 'Parkinsans';
   font-size: 1.5rem;
-  color: #333;}
+  color: #333;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -205,7 +216,8 @@
   margin: 20px 0 0;
   padding: 0;
   max-height: 200px;
-  overflow-y: auto; /* Adiciona scroll apenas à lista de comentários */
+  overflow-y: auto;
+  /* Adiciona scroll apenas à lista de comentários */
   overflow-y: auto;
   border-top: 1px solid #ddd;
   padding-top: 10px;

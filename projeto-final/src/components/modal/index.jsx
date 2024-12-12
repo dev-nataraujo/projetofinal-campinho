@@ -2,17 +2,17 @@ import React from 'react';
 import './modal.css'
 import comentariosMock from './data'
 
-function Modal({onClose, data}) {
+function Modal({ onClose, data }) {
   const [comment, setComment] = React.useState(''); // Estado para armazenar o comentário
   const [comments, setComments] = React.useState([]); // Lista de comentários armazenados
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0); // Controle do índice da imagem exibida
-  
+
   React.useEffect(() => { // Carrega comentários mockados com base no ID do jogo
     const comentariosExistentes = comentariosMock[data.id] || [];
     setComments(comentariosExistentes);
   }, [data.id]);
 
-  React.useEffect(() => {     
+  React.useEffect(() => {
     document.body.style.overflow = 'hidden'; // Impede o scroll do body quando o modal está aberto
     return () => {
       document.body.style.overflow = 'auto'; // Restaura o scroll do body quando o modal é fechado
