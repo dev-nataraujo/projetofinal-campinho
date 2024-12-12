@@ -48,11 +48,11 @@ src/
 │   ├── card/       
 │   │   ├── card.css         
 │   │   └── index.jsx 
+│   ├── carrossel/
+│   │   ├── carrossel.css         
+│   │   └── index.jsx
 │   ├── footer/
 │   │   ├── footer.css         
-│   │   └── index.jsx 
-│   ├── header/
-│   │   ├── header.css         
 │   │   └── index.jsx 
 │   ├── modal/
 │   │   ├── data/
