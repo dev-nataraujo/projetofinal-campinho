@@ -139,9 +139,44 @@
 }
 
 @media (max-width: 768px) {
+    /* Ajusta a navegação para ser mais compacta em telas menores */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar-links a {
+        font-size: 12px; /* Reduz o tamanho da fonte para caber melhor */
+    }
+
+    /* Dropdown responsivo */
     .dropdown-item {
-        left: 0; /* Alinha ao início do botão */
-        right: auto; /* Evita ultrapassar a tela */
-        min-width: 100%; /* Usa a largura total do container pai */
+        position: static; /* Remove a posição absoluta */
+        box-shadow: none; /* Remove sombra para simplificar o layout */
+        min-width: auto; /* Usa o tamanho automático do conteúdo */
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown-item .nav-item {
+        padding: 8px 10px; /* Ajusta espaçamento interno */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Exibe o dropdown de maneira fluida */
+    .dropdown:hover .dropdown-item {
+        display: block; /* Já exibe, sem necessidade de hover */
     }
 }

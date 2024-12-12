@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import '../header/header.css';
+import '../carrossel/carrossel.css';
 import header6 from '/src/assets/header6.png';
 import header2 from '/src/assets/header2.png';
 import header5 from '/src/assets/header5.png';
 
-function Header() {
+function Carrossel() {
 
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0); // Estado para o índice da imagem atual
 
@@ -70,4 +70,4 @@ function Header() {
   );
 };
 
-export default Header;
+export default Carrossel;

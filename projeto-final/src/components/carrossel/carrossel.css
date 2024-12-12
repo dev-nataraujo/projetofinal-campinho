@@ -104,16 +104,31 @@
 
 /* Responsividade para telas menores */
 @media (min-width: 200px) and (max-width: 728px) {
+  .header {
+    height: 250px; /* Reduz a altura do header */
+  }
+
   .header-background {
-    height: 200px;
-    /* Ajuste a altura em telas menores */
+    height: 100%; /* Ajusta proporcionalmente */
+  }
+
+  .header-content {
+    font-size: 1.5rem; /* Ajusta o tamanho do texto */
+    padding: 15px; /* Reduz o padding */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
   }
 
   .header-content h2 {
-    font-size: 20px;
+    font-size: 18px; /* Reduz tamanho do título */
   }
 
   .header-content p {
-    font-size: 14px;
+    font-size: 14px; /* Texto mais compacto */
+  }
+
+  .about p {
+    font-size: 0.9rem; /* Texto menor para otimizar espaço */
+    line-height: 1.4; /* Reduz o espaçamento entre linhas */
+    margin: 0 auto;
   }
 }

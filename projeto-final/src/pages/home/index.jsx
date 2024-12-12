@@ -7,7 +7,8 @@ import Modal from '../../components/modal';
 function Home() {
 
   const [data, setData] = React.useState([]);
-  const [error, setError] = React.useState(null);
+  const [error, setError] = React.useState(false);
+  const [msgError, setMsgError] = React.useState(null);
 
   const [isModalOpen, setIsModalOpen] = React.useState(false); // Estado para controlar o modal
   const [selectedItem, setSelectedItem] = React.useState(null); // Estado para armazenar o item selecionado
@@ -16,11 +17,13 @@ function Home() {
     api.get('/games')
       .then(response => {
         setData(response.data.data);
-        setError(null); // Limpa erros anteriores ao carregar os dados
+        setError(false);
+        setMsgError(null); // Limpa erros anteriores ao carregar os dados
         console.log(response.data.data);
       })
       .catch(error => {
-        setError('Erro ao fazer requisição. Não foi possível carregar os dados. Tente novamente mais tarde.');
+        setError(true);
+        setMsgError('Erro ao fazer requisição. Não foi possível carregar os dados. Tente novamente mais tarde.');
         console.error('Erro ao fazer requisição:', error);
       });
   }
@@ -40,24 +43,24 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <section>
-        {/* Mensagem de erro */}
-        {error && (
+        {error ? ( // Exibe mensagem de erro
           <div className="error-message">
-            <p>{error}</p>
-            <button onClick={getGames} className="error-button">Tentar novamente</button>
+            <p>{msgError}</p>
+            <button onClick={getGames} className="error-button">
+              Tentar novamente
+            </button>
           </div>
-        )}
-
-        {/* Renderiza os cards somente se não houver erro */}
-        {!error && (
-          <div className='lista-card'>
-            {
-              data.slice(0, 9).map(item => ( // Exibe apenas os primeiros 9 itens
-                <Card key={item.id} data={item} onClick={() => openModal(item)} />
-              ))
-            }
+        ) : data.length > 0 ? (// Exibe os cards se a lista de jogos não estiver vazia
+          <div className="lista-card">
+            {data.slice(0, 9).map((item) => (
+              <Card key={item.id} data={item} onClick={() => openModal(item)} />
+            ))}
+          </div>
+        ) : ( // Exibe mensagem caso a lista esteja vazia
+          <div className="error-message">
+            <p>Não existem jogos na lista!</p>
           </div>
         )}
 

@@ -4,13 +4,13 @@ import './app.css'
 import Home from './pages/home/index.jsx'
 import Navbar from './components/navbar/index.jsx'
 import Footer from './components/footer/index.jsx'
-import Header from './components/header/index.jsx'
+import Carrossel from './components/carrossel/index.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <>
+  <div>
     <Navbar />
-    <Header />
+    <Carrossel />
     <Home />
     <Footer />
-  </>
+  </div>
 )

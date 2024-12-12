@@ -1,3 +1,9 @@
+.container {
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 h1 {
     /* Texto do header */
     font-family: 'Parkinsans';
@@ -51,6 +57,7 @@ h1 {
 
 @media (max-width: 600px) {
     .lista-card {
+        align-items: center;
         grid-template-columns: 1fr;
     }
 }
